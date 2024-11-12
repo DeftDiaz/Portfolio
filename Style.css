@@ -1,0 +1,74 @@
+/* Estilo para el encabezado */
+header h1 {
+    font-size: 2.5rem;
+}
+
+/* Sección Home */
+section#home h2 {
+    color: #007bff; /* Color azul de Bootstrap */
+}
+
+/* Sección Sobre mí */
+section#about h2 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+section#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Sección Proyectos */
+section#projects h2 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Sección Habilidades */
+.skill-box {
+    width: 100px; /* Ajusta el ancho deseado */
+    height: 120px; /* Ajusta la altura deseada */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.skill-box img {
+    display: block;
+    margin: 0 auto;
+    width: 50px; /* Tamaño uniforme para todas las imágenes de logos */
+    height: 50px;
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+    margin-bottom: 8px; /* Espacio entre el logo y el texto */
+}
+
+/* Sección Contacto */
+section#contact h2 {
+    font-size: 2rem;
+    color: #343a40;
+}
+
+.social-logo {
+    width: 40px; /* Ajusta el tamaño según tus preferencias */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s; /* Añade una animación al pasar el cursor (opcional) */
+}
+
+.social-logo:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño en hover */
+}
+
