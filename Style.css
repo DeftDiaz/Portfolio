@@ -1,3 +1,10 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilo para el encabezado */
 header h1 {
     font-size: 2.5rem;
@@ -5,7 +12,8 @@ header h1 {
 
 /* Sección Home */
 section#home h2 {
-    color: #007bff; /* Color azul de Bootstrap */
+    color: #007bff;
+    /* Color azul de Bootstrap */
 }
 
 /* Sección Sobre mí */
@@ -25,6 +33,29 @@ section#projects h2 {
     color: #343a40;
 }
 
+/* Tarjetas en la sección de proyectos */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Asegura que el contenido dentro de la tarjeta esté bien distribuido */
+    height: 100%;
+    /* Todas las tarjetas tendrán la misma altura */
+}
+
+.image-container {
+    height: 200px;
+    /* Altura fija para las imágenes */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que las imágenes se ajusten al contenedor sin distorsionarse */
+}
+
 .card-title {
     font-size: 1.25rem;
 }
@@ -36,8 +67,10 @@ section#projects h2 {
 
 /* Sección Habilidades */
 .skill-box {
-    width: 100px; /* Ajusta el ancho deseado */
-    height: 120px; /* Ajusta la altura deseada */
+    width: 100px;
+    /* Ajusta el ancho deseado */
+    height: 120px;
+    /* Ajusta la altura deseada */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +83,13 @@ section#projects h2 {
 .skill-box img {
     display: block;
     margin: 0 auto;
-    width: 50px; /* Tamaño uniforme para todas las imágenes de logos */
+    width: 50px;
+    /* Tamaño uniforme para todas las imágenes de logos */
     height: 50px;
-    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
-    margin-bottom: 8px; /* Espacio entre el logo y el texto */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste sin distorsionarse */
+    margin-bottom: 8px;
+    /* Espacio entre el logo y el texto */
 }
 
 /* Sección Contacto */
@@ -63,12 +99,75 @@ section#contact h2 {
 }
 
 .social-logo {
-    width: 40px; /* Ajusta el tamaño según tus preferencias */
-    height: auto; /* Mantiene la proporción de la imagen */
-    transition: transform 0.3s; /* Añade una animación al pasar el cursor (opcional) */
+    width: 40px;
+    /* Ajusta el tamaño según tus preferencias */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    transition: transform 0.3s;
+    /* Añade una animación al pasar el cursor (opcional) */
 }
 
 .social-logo:hover {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño en hover */
+    transform: scale(1.1);
+    /* Aumenta ligeramente el tamaño en hover */
 }
 
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Centrar el contenido en pantallas pequeñas */
+    header {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /* Ajustar las tarjetas de proyectos para que ocupen todo el ancho */
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .col-md-4 {
+        width: 100%;
+    }
+
+    /* Ajustar el tamaño de las habilidades */
+    .skill-box {
+        width: 80px;
+        height: 100px;
+    }
+
+    .skill-box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Espaciado en la sección contacto */
+    section#contact {
+        padding: 1rem;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 576px) {
+
+    /* Aumentar el espacio entre las secciones */
+    section {
+        padding: 1rem;
+    }
+
+    /* Redimensionar imágenes de perfil y redes sociales */
+    #home img {
+        width: 120px;
+    }
+
+    .social-logo {
+        width: 30px;
+    }
+}
